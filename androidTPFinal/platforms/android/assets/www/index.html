@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+
+
+        <link rel="stylesheet" href="./libs/jquery.mobile-1.4.2.css" />
+        <script src="./libs/jquery-2.1.1.js"></script>
+        <script src="./libs/jquery.mobile-1.4.2.js"></script>
+        <script src="./libs/functions.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <title>Titulo Pagina</title>
+
+    </head>
+    <body>
+
+        <!-- HOME -->
+        <div data-role="page" id="pagina1">
+            <div data-role="header">
+                <h1>Titulo</h1>
+            </div>
+
+            <div data-role="content"> 
+
+                <p>Contenido</p>
+
+                <div class="ui-field-contain">
+                    <select name="select-custom-1" id="selectOpt" data-native-menu="false" onchange="menu()">
+                        <option value="0">Menu</option>
+                        <option value="1">Estado de Bateria</option>
+                        <option value="2">Listar Contactos</option>
+                    </select>
+                </div>
+
+                <a href="#page2" data-transition="slide">Acerca de...</a>  
+            </div>
+
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
+
+        </div>
+
+        <!-- ACERCA DE -->
+        <div data-role="page" id="page2">
+            <div data-role="header">
+                <h1>Titulo</h1>
+            </div>
+
+            <div data-role="content">   
+                <p>Martin Rossi</p>
+                <a href="#pagina1" data-transition="slide">Volver</a>  
+            </div>
+
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
+        </div>
+
+
+        <!-- CONTACTOS -->
+        <div data-role="page" id="contactos">
+            <div data-role="header">
+                <h1>Titulo</h1>
+            </div>
+
+            <div data-role="content">   
+                <a id="boton1" data-role="button" data-icon="star" onclick="listarContactos()">Listar Contactos</a>
+
+                </br>
+                </br>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busca a tus amigotes..." data-inset="true" id="listaContactos">
+                </ul>
+                </br>
+                </br>
+                <a href="#pagina1" data-transition="slide">Volver</a> 
+            </div>
+
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
+        </div>
+
+        <!-- BATERIA -->
+        <div data-role="page" id="bateria">
+            <div data-role="header">
+                <h1>Titulo</h1>
+            </div>
+
+            <div data-role="content">   
+
+                <a id="boton1" data-role="button" data-icon="star" onclick="nivelBateria()">Estado de Bateria</a>
+                </br>
+                </br>
+                <p>Nivel de Bateria:</p>
+                
+                <input type="range" name="slider-fill" id="barra" value="60" min="0" max="100" step="1" data-highlight="true">
+
+                </br>
+                </br>
+
+                <p>Conectado:</p>
+                
+                <select id="checkbox1" data-role="slider">
+                    <option value="off">No</option>
+                    <option value="on" selected="">Si</option>
+                </select>
+
+                </br>
+                </br>
+                <a href="#pagina1" data-transition="slide">Volver</a> 
+            </div>
+
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
+        </div>
+
+    </body>
+</html>
