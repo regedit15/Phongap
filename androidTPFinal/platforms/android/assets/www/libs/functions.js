@@ -33,18 +33,21 @@ function onBatteryStatus(info)
 function listarContactos() 
 {
     var options = new ContactFindOptions();
-    // options.filter=""; 
-    var fields = ["displayName", "name"];
+    options.filter=""; 
+    options.multiple = true;
+    var fields = ["displayName", "name", "emails", "name", "phoneNumbers"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function onSuccess(contacts) 
 {
-    alert("Cantidad de Contactos: " + contacts.length)
+    // alert("Cantidad de Contactos: " + contacts.length)
     for (var i=0; i<contacts.length; i++) {
 
-        // alert("Nombre: " + contacts[i].displayName);
-        $('#listaContactos').append('<li>' + contacts[i].displayName + '</li>').listview('refresh');
+        alert("Nombre: " + contacts[i].displayName + "\n name: " + contacts[i].name.value + "\n emails:" + contacts[i].emails.value + "\n emails:" + contacts[i].phoneNumbers[i].value );
+        //lista el tipo de numero Ej: mobil
+        // contacts[i].phoneNumbers[i].type
+        $('#listaContactos').append('<li>' + contacts[i].displayName + contacts[i].phoneNumbers[i].value + '</li>').listview('refresh');
     }
 }
 
