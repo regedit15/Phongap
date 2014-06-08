@@ -45,7 +45,7 @@ function onSuccess(contacts) {
         var contact = contacts[i];
         // alert("" +  contact.displayName + " " + contact.phoneNumbers[0].value);
 
-        $('#listaContactos').append('<li>' + contacts[i].displayName + contact.phoneNumbers[0].value + '</li>').listview('refresh');
+        $('#listaContactos').append('<li><a href="#dialogo">' + contacts[i].displayName + contact.phoneNumbers[0].value + '</a></li>').listview('refresh');
     }
 }
 

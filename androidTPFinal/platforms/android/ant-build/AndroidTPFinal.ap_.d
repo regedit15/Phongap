@@ -28,6 +28,7 @@ C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\libs\jquery-2.1.1.js \
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\libs\jquery.mobile-1.4.2.css \
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\libs\jquery.mobile-1.4.2.js \
+C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\libs\theme-classic.css \
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\plugins\org.apache.cordova.battery-status \
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\plugins\org.apache.cordova.contacts \
 C:\Users\martin\Documents\GitHub\Phongap\androidTPFinal\platforms\android\assets\www\plugins\org.apache.cordova.battery-status\www \

@@ -1,36 +1,4 @@
-
-
-
-function listarContactos() {
-    
-    var options = new ContactFindOptions();
-    options.filter = "";
-    options.multiple = true; 
-    var fields = ["displayName", "name", "phoneNumbers"];
-    navigator.contacts.find(fields, onSuccess, onError, options);
-}
-
-function onSuccess(contacts) {
-
-    for(var i = 0; i < contacts.length; i++) {
-
-        var contact = contacts[i];
-        // alert("" +  contact.displayName + " " + contact.phoneNumbers[0].value);
-
-
-
-        $('#listaContactos').append('<li>' + contacts[i].displayName + contact.phoneNumbers[0].value + '</li>').listview('refresh');
-    }
-}
-
-function onError(contactError) {
-  alert('onError!');
-}
-
-
-
-
-// //-------------------- Bateria
+//-------------------- Bateria
 function nivelBateria() 
 {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -60,58 +28,31 @@ function onBatteryStatus(info)
 // //---------------------------------
 
 
-// //-------------------- Listar contactos
-// function listarContactos() 
-// {
-//     var options = new ContactFindOptions();
-//     options.filter=""; 
-//     options.multiple = true;
-//     var fields = ["displayName", "name", "phoneNumbers"];
-//     navigator.contacts.find(fields, onSuccess, onError, options);
-
-// }
-
-// function onSuccess(contacts) 
-// {
-//     alert("Cantidad de Contactos: " + contacts.length);
-
-  //   for(var i = 0; i < contacts.length; i++) {
-
-  //   var contact = contacts[i];
-
-  //   for(var j = 0; j < contact.phoneNumbers.length; j++) {
-  //     alert("" +  contact.phoneNumbers[j].value );
-  //   }
-  // }
-
-
+//-------------------- Listar contactos
+function listarContactos() {
     
-    // for (var i=0; i<contacts.length; i++) {
-    //     alert("entro");
-    //     var contact = contacts[i];
-    //     // alert("aaa" + contact.phoneNumbers[i].value);
-        
+    var options = new ContactFindOptions();
+    options.filter = "";
+    options.multiple = true; 
+    var fields = ["displayName", "name", "phoneNumbers"];
+    navigator.contacts.find(fields, onSuccess, onError, options);
+}
 
-    //     for(var j = 0; j < contact.phoneNumbers.length; j++) {
-    //       alert("" +  contact.phoneNumbers[j].value );
-    //     }
+function onSuccess(contacts) {
 
+    for(var i = 0; i < contacts.length; i++) {
 
+        var contact = contacts[i];
+        // alert("" +  contact.displayName + " " + contact.phoneNumbers[0].value);
 
-        // alert("Nombre: " + contacts[i].displayName + "\n name: " + contacts[i].name.value + "\n emails:" + contacts[i].emails.value + "\n emails:" + contacts[i].phoneNumbers[i].value );
-        // lista el tipo de numero Ej: mobil
-        // contacts[i].phoneNumbers[i].type
-        // $('#listaContactos').append('<li>' + contacts[i].displayName + contacts.phoneNumbers[i].value + '</li>').listview('refresh');
-    // }
+        $('#listaContactos').append('<li><a href="#dialogo">' + contacts[i].displayName + contact.phoneNumbers[0].value + '</a></li>').listview('refresh');
+    }
+}
 
-    // function onError(contactError) 
-    // {
-    //   alert('onError!');
-    // }
-// }
-
-
-// //---------------------------------
+function onError(contactError) {
+  alert('onError!');
+}
+//---------------------------------
 
 
 function menu() 
