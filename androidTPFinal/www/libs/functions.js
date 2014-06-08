@@ -1,4 +1,3 @@
-
 //-------------------- Bateria
 function nivelBateria() 
 {
@@ -26,34 +25,32 @@ function onBatteryStatus(info)
     // alert("Nivel de bateria: " + info.level + "%. " + frase);
     $("#barra").val(info.level).slider("refresh");
 }
-//---------------------------------
+// //---------------------------------
 
 
 //-------------------- Listar contactos
-function listarContactos() 
-{
+function listarContactos() {
+    
     var options = new ContactFindOptions();
-    options.filter=""; 
-    options.multiple = true;
-    var fields = ["displayName", "name", "emails", "name", "phoneNumbers"];
+    options.filter = "";
+    options.multiple = true; 
+    var fields = ["displayName", "name", "phoneNumbers"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
-function onSuccess(contacts) 
-{
-    // alert("Cantidad de Contactos: " + contacts.length)
-    for (var i=0; i<contacts.length; i++) {
+function onSuccess(contacts) {
 
-        alert("Nombre: " + contacts[i].displayName + "\n name: " + contacts[i].name.value + "\n emails:" + contacts[i].emails.value + "\n emails:" + contacts[i].phoneNumbers[i].value );
-        //lista el tipo de numero Ej: mobil
-        // contacts[i].phoneNumbers[i].type
-        $('#listaContactos').append('<li>' + contacts[i].displayName + contacts[i].phoneNumbers[i].value + '</li>').listview('refresh');
+    for(var i = 0; i < contacts.length; i++) {
+
+        var contact = contacts[i];
+        // alert("" +  contact.displayName + " " + contact.phoneNumbers[0].value);
+
+        $('#listaContactos').append('<li>' + contacts[i].displayName + contact.phoneNumbers[0].value + '</li>').listview('refresh');
     }
 }
 
-function onError(contactError) 
-{
-    alert('sos un pancho que no sabe programar!');
+function onError(contactError) {
+  alert('onError!');
 }
 //---------------------------------
 
