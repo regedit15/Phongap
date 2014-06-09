@@ -42,8 +42,7 @@
                         <option value="2">Listar Contactos</option>
                     </select>
                 </div>
-
-                <a href="#page2" data-transition="slide">Acerca de...</a>  
+                <a href="#acercaDe" data-transition="slide">Acerca de...</a>  
             </div>
 
             <div data-role="footer">
@@ -51,23 +50,6 @@
             </div>
 
         </div>
-
-        <!-- ACERCA DE -->
-        <div data-role="page" id="page2">
-            <div data-role="header">
-                <h1>Titulo</h1>
-            </div>
-
-            <div data-role="content">   
-                <p>Martin Rossi</p>
-                <a href="#pagina1" data-transition="slide">Volver</a>  
-            </div>
-
-            <div data-role="footer">
-                <h4>Footer</h4>
-            </div>
-        </div>
-
 
         <!-- CONTACTOS -->
         <div data-role="page" id="contactos">
@@ -100,13 +82,16 @@
             </div>
 
             <div data-role="content">   
-
-                
-                <p>Nombre: Martin</p>
+                <p>Nombre: </p> 
+                <label id="nombreContacto"></label>
                 </br>
-                <p>Tel: 031210</p>
+                <p>Tel: </p>
+                <label id="telefonoContacto"></label>
                 </br>
-                <a id="boton1" data-role="button" data-icon="star" onclick="nivelBateria()">Estado de Bateria</a>
+                <p>Correo: </p>
+                <label id="correoContacto"></label>
+                <a href="#contactos" data-transition="slide">Acerca de...</a>
+                <!-- <a id="boton1" data-role="button" data-icon="star">Volver</a> -->
 
             </div>
         </div>
@@ -124,7 +109,7 @@
                 </br>
                 <p>Nivel de Bateria:</p>
 
-                <input type="range" name="slider-fill" id="barra" data-mini="true" data-track-theme="b"value="60" min="0" max="100" step="1" data-highlight="true" >
+                <input type="range" name="slider-fill" id="barra" data-mini="true" data-track-theme="c"value="60" min="0" max="100" step="1" data-highlight="true" >
 
                 </br>
                 </br>
@@ -139,6 +124,22 @@
                 </br>
                 </br>
                 <a href="#pagina1" data-transition="slide">Volver</a> 
+            </div>
+
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
+        </div>
+
+        <!-- ACERCA DE -->
+        <div data-role="page" id="acercaDe">
+            <div data-role="header">
+                <h1>Titulo</h1>
+            </div>
+
+            <div data-role="content">   
+                <p>Martin Rossi</p>
+                <a href="#pagina1" data-transition="slide">Volver</a>  
             </div>
 
             <div data-role="footer">

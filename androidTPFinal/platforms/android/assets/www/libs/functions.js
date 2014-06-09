@@ -30,7 +30,6 @@ function onBatteryStatus(info)
 
 //-------------------- Listar contactos
 function listarContactos() {
-    
     var options = new ContactFindOptions();
     options.filter = "";
     options.multiple = true; 
@@ -43,10 +42,15 @@ function onSuccess(contacts) {
     for(var i = 0; i < contacts.length; i++) {
 
         var contact = contacts[i];
-        // alert("" +  contact.displayName + " " + contact.phoneNumbers[0].value);
 
-        $('#listaContactos').append('<li><a href="#dialogo">' + contacts[i].displayName + contact.phoneNumbers[0].value + '</a></li>').listview('refresh');
+        $('#listaContactos').append('<li><a href="#dialogo">' + contacts[i].displayName + '</a></li>').listview('refresh');        
     }
+
+    $('#listaContactos').children('li').on('click', function () 
+    {
+       $("#nombreContacto").text(contacts[$(this).index()].displayName);
+       $("#telefonoContacto").text(contacts[$(this).index()].phoneNumbers[0].value);
+    });
 }
 
 function onError(contactError) {
