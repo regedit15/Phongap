@@ -54,12 +54,10 @@
         <!-- CONTACTOS -->
         <div data-role="page" id="contactos">
             <div data-role="header">
-                <h1>Titulo</h1>
+                <h1>Contactos</h1>
             </div>
 
-            <div data-role="content">   
-                <a id="boton1" data-role="button" data-icon="star" onclick="listarContactos()">Listar Contactos</a>
-
+            <div data-role="content">  
                 </br>
                 </br>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Busca a tus amigotes..." data-inset="true" id="listaContactos">
@@ -76,22 +74,23 @@
 
 
         <!-- CONTACTO -->
-        <div data-role="dialog" id="dialogo" data-theme="e">
+        <div data-role="dialog" id="dialogo" data-theme="e" data-close-btn="none">
             <div data-role="header">
                 <h1>Contacto</h1>
             </div>
 
             <div data-role="content">   
-                <p>Nombre: </p> 
-                <label id="nombreContacto"></label>
+                <p style="font-weight: bold;">Nombre: </p> 
+                <center><label id="nombreContacto"></label></center>
                 </br>
-                <p>Tel: </p>
-                <label id="telefonoContacto"></label>
+                <p style="font-weight: bold;">Tel: </p>
+                <center><label id="telefonoContacto"></label></center>
                 </br>
-                <p>Correo: </p>
-                <label id="correoContacto"></label>
-                <a href="#contactos" data-transition="slide">Acerca de...</a>
-                <!-- <a id="boton1" data-role="button" data-icon="star">Volver</a> -->
+                <p style="font-weight: bold;">Correo: </p>
+                <center><label id="correoContacto"></label></center>
+                </br>
+                </br>
+                <a id="boton1" data-role="button" data-icon="check" onclick="irAContactos();">Volver</a>
 
             </div>
         </div>
@@ -99,12 +98,10 @@
         <!-- BATERIA -->
         <div data-role="page" id="bateria">
             <div data-role="header">
-                <h1>Titulo</h1>
+                <h1>Estado de Bateria</h1>
             </div>
 
             <div data-role="content">   
-
-                <a id="boton1" data-role="button" data-icon="star" onclick="nivelBateria()">Estado de Bateria</a>
                 </br>
                 </br>
                 <p>Nivel de Bateria:</p>

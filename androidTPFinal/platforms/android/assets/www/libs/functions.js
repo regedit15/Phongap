@@ -13,16 +13,13 @@ function onBatteryStatus(info)
 {
     if (info.isPlugged) 
     {
-        // var frase = "Esta conectado: SI";
         $("#checkbox1").val('on').slider('refresh');//si
     } 
     else 
     {
-        // var frase = "Esta conectado: NO";
         $("#checkbox1").val('off').slider('refresh');//no
     }
 
-    // alert("Nivel de bateria: " + info.level + "%. " + frase);
     $("#barra").val(info.level).slider("refresh");
 }
 // //---------------------------------
@@ -33,7 +30,7 @@ function listarContactos() {
     var options = new ContactFindOptions();
     options.filter = "";
     options.multiple = true; 
-    var fields = ["displayName", "name", "phoneNumbers"];
+    var fields = ["displayName", "name", "phoneNumbers", "emails"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
@@ -50,6 +47,7 @@ function onSuccess(contacts) {
     {
        $("#nombreContacto").text(contacts[$(this).index()].displayName);
        $("#telefonoContacto").text(contacts[$(this).index()].phoneNumbers[0].value);
+       $("#correoContacto").text(contacts[$(this).index()].emails[0].value);
     });
 }
 
@@ -73,4 +71,9 @@ function menu()
         $.mobile.changePage($("#contactos"), { transition: "slideup"});
         listarContactos();
     }
+}
+
+function irAContactos() 
+{
+    $.mobile.changePage($("#contactos"), { transition: "slideup"});
 }
