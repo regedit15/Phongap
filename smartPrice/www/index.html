@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- importar boostrap  -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <title>Hello World</title>
+</head>
+
+<body>
+
+    <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">sm@rtPrice</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="contenedor">
+
+            <table id="tablaA" class="tabla">
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-info" id="btn_agregar">
+                            <span class="glyphicon glyphicon-plus"></span>Agregar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 class="titulo">Precio</h4>
+                        <input class="form-control" id="precio">
+                    </td>
+                    <td>
+                        <h4 class="titulo">Cantidad</h4>
+                        <input class="form-control" id="cantidad">
+                    </td>
+                    <td>
+                        <h4 class="precio">Resultado</h4>
+                        <div class="alert alert-success">
+                            <h4 id="resultado" class="precio">%55.55</h4>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</body>
+
+</html>
