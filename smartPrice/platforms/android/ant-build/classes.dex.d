@@ -3,6 +3,7 @@ C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\CordovaApp.class \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R$attr.class \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R$drawable.class \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R$mipmap.class \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R$string.class \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R$xml.class \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\classes\io\cordova\hellocordova\R.class \

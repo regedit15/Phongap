@@ -1,32 +1,16 @@
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\CordovaApp.ap_ \
- : C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable\icon.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-hdpi\icon.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-land-hdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-land-ldpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-land-mdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-land-xhdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-ldpi\icon.png \
+ : C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-hdpi\icon.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-mdpi\icon.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-port-hdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-port-ldpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-port-mdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-port-xhdpi\screen.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-xhdpi\icon.png \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-xxhdpi\icon.png \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\drawable-xxxhdpi\icon.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\values\strings.xml \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\res\xml\config.xml \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable\icon.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-hdpi\icon.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-land-hdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-land-ldpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-land-mdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-land-xhdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-ldpi\icon.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-mdpi\icon.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-port-hdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-port-ldpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
-C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-xxhdpi\icon.png \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\ant-build\res\drawable-xxxhdpi\icon.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\_where-is-www.txt \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\acercaDe.html \
@@ -46,6 +30,7 @@ C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\fonts\
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\fonts\glyphicons-halflings-regular.woff \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\fonts\glyphicons-halflings-regular.woff2 \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\img\logo.png \
+C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\img\logo2.png \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\js\bootstrap.min.js \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\js\index.js \
 C:\Users\martin\Documents\Phongap\smartPrice\platforms\android\assets\www\js\jquery-2.1.4.min.js \

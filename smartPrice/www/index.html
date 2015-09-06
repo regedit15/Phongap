@@ -10,7 +10,9 @@
 
     <!-- importar javascript -->
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
 
     <!-- importar boostrap  -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -30,18 +32,16 @@
         </div>
     </nav>
 
-    <div class="contenedor">
+    <form id="myform">
+        <div class="contenedor">
+            <button type="button" class="btn btn-info" id="btn_agregar">
+                <span class="glyphicon glyphicon-plus"></span>Agregar
+            </button>
 
-        <button type="button" class="btn btn-info" id="btn_agregar">
-            <span class="glyphicon glyphicon-plus"></span>Agregar
-        </button>
-
-        <div id="grilla" class="container-fluid">
-
-
+            <div id="grilla" class="container-fluid">
+            </div>
         </div>
-    </div>
-
+    </form>
 </body>
 
 </html>
