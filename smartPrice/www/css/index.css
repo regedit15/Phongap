@@ -30,7 +30,6 @@ input {
 }
 .navbar-brand {
     margin-left: 0px !important;
-    ;
     position: absolute;
     width: 100%;
     left: 0;
@@ -84,4 +83,7 @@ input {
 }
 .glyphicon {
     margin-right: 5px;
+}
+.error {
+    color: red;
 }
