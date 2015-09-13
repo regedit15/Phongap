@@ -13,13 +13,13 @@
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
-
     <!-- importar boostrap  -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <title>Hello World</title>
+    <title>sm@rtPrice</title>
+    <link href='img/icon.png?1.2' rel='shortcut icon' type='image/png' />
 </head>
 
 <body>
@@ -32,22 +32,30 @@
         </div>
     </nav>
 
-    <form id="myform">
+    <table class="tablaContenedora">
+        <tr>
+            <td class="textoCentrado">
+                <div class="divContenedor">
+                    <table>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-info" id="btn_agregar">
+                                    <span class="glyphicon glyphicon-plus"></span>Agregar
+                                </button>
+                            </td>
+                        </tr>
 
-
-
-        <div class="contenedor">
-
-
-            <button type="button" class="btn btn-info" id="btn_agregar">
-                <span class="glyphicon glyphicon-plus"></span>Agregar
-            </button>
-
-            <div id="grilla" class="container-fluid">
-
-            </div>
-        </div>
-    </form>
+                        <tr>
+                            <td>
+                                <div id="grilla" class="container-fluid">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>

@@ -11,13 +11,13 @@ $(document).ready(function() {
             "<div class='row'>" +
             "   <div class='col-sm-4'>" +
             "       <h4 class='titulo'>Precio</h4>" +
-            "       <input type='number' class='form-control' id='precio-" + contador + "' name='precio-" + contador + "'> " +
+            "       <input type='tel' class='form-control' id='precio-" + contador + "' name='precio-" + contador + "'> " +
             "   </div>" +
             "   <div class='col-sm-4'>" +
             "       <h4 class='titulo'>Cantidad</h4>" +
-            "       <input type='number' class='form-control' id='cantidad-" + contador + "' name='cantidad-" + contador + "'>" +
+            "       <input type='tel' class='form-control' id='cantidad-" + contador + "' name='cantidad-" + contador + "'>" +
             "   </div>" +
-            "   <div class='col-sm-3'>" +
+            "   <div class='col-sm-4'>" +
             "       <h4 class='precio'>Resultado</h4>" +
             "       <div id='divVerde' class='alert alert-success'>" +
             "           <h4 id='resultado-" + contador + "' class='precio'>" + precioVacio + "</h4>" +
@@ -26,7 +26,6 @@ $(document).ready(function() {
             "</div>";
 
         $('#grilla').append(fila);
-
 
         $("#precio-" + contador).rules('add', {
             required: true,
@@ -41,7 +40,7 @@ $(document).ready(function() {
         $("#precio-" + contador).keyup(calcularPrecio);
         $("#cantidad-" + contador).keyup(calcularPrecio);
 
-        contador = contador + 1;
+        contador++;
     });
 
     // para cargar la fila al cargar la pagina
@@ -70,7 +69,9 @@ $(document).ready(function() {
     }
 
     jQuery.validator.addMethod("soloNumeros", function(value, element) {
-        return this.optional(element) || /^[0-9]+(.[0-9]{1,2})?$/.test(value);
+        return this.optional(element) || /^[0-9]+(\.[0-9]{1,2})?$/.test(value);
     }, "Ingrese un n&uacute;mero decimal. Ej: 22.50");
+
+
 
 });
