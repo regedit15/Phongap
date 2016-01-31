@@ -3,59 +3,113 @@
 
 <head>
 
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- Responsibidad Bootstrap-->
+<meta
+	name="format-detection"
+	content="telephone=no" />
+<meta
+	name="msapplication-tap-highlight"
+	content="no" />
+<meta
+	name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
-    <!-- importar javascript -->
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="css/index.css">
 
-    <!-- importar boostrap  -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- Bootstrap -->
 
-    <title>sm@rtPrice</title>
-    <link href='img/icon.png?1.2' rel='shortcut icon' type='image/png' />
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+
+
+<title>sm@rtPrice</title>
+
+<link
+	href='img/icon.png?1.2'
+	rel='shortcut icon'
+	type='image/png' />
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="acercaDe.html">sm@rtPrice</a>
-            </div>
-        </div>
-    </nav>
 
-    <table class="tablaContenedora">
-        <tr>
-            <td class="textoCentrado">
-                <div class="divContenedor">
-                    <table>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-info" id="btn_agregar">
-                                    <span class="glyphicon glyphicon-plus"></span>Agregar
-                                </button>
-                            </td>
-                        </tr>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a
+					class="navbar-brand"
+					href="#/acercaDe">sm@rtPrice</a>
+			</div>
+		</div>
+	</nav>
 
-                        <tr>
-                            <td>
-                                <div id="grilla" class="container-fluid">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </td>
-        </tr>
-    </table>
+
+
+	<!-- 	<table class="tablaContenedora"> -->
+	<!-- 		<tr> -->
+	<!-- 			<td class="textoCentrado"> -->
+	<!-- 				<div class="divContenedor"> -->
+
+	<!-- 					<div -->
+	<!-- 						ng-app="smartPrice" -->
+	<!-- 						ng-controller="smartPriceController"> -->
+	<!-- 						<div ng-view></div> -->
+
+	<!-- 					</div> -->
+	<!-- 				</div> -->
+
+	<!-- 			</td> -->
+	<!-- 		</tr> -->
+	<!-- 	</table> -->
+
+	<div id="papa">
+
+		<div class="acercaDe">
+			<div style="margin: auto; margin-top: 50px; display: table;">
+				<div
+					ng-app="smartPrice"
+					ng-controller="smartPriceController">
+					<div ng-view></div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- jquery -->
+	<script
+		type="text/javascript"
+		src="bower_components/jquery/dist/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- Modelos -->
+	<script src="js/models/models.js"></script>
+
+	<!-- Angularjs -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.js"></script>
+
+	<!-- Controladores -->
+	<script src="js/controllers/smartPriceController.js"></script>
+
+	<!-- Rutas -->
+	<script src="js/routes/route.js"></script>
+
 </body>
 
 </html>

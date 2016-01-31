@@ -1,0 +1,93 @@
+
+<form
+	name="form"
+	novalidate>
+
+
+	<table>
+		<tr>
+			<td>
+				<button
+					type="button"
+					class="btn btn-info"
+					id="btn_agregar"
+					ng-click="agregar()">
+					<span class="glyphicon glyphicon-plus"></span>
+					Agregar
+				</button>
+			</td>
+		</tr>
+
+		<tr ng-repeat="x in calculos">
+			<td>
+				<div
+					id="grilla"
+					class="container-fluid">
+					<div class='row'>
+						<div class='col-sm-4'>
+
+							<div ng-class="{'has-error': form.precio{{$index}}.$touched && form.precio{{$index}}.$invalid}">
+								<h4 class='titulo'>Precio</h4>
+								<input
+									type='tel'
+									name="precio{{$index}}"
+									value="{{x.precio}}"
+									class="form-control"
+									ng-model="x.precio"
+									ng-keyup="calcular(x)"
+									ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+									ng-maxlength="6"
+									required>
+
+								<div
+									class="help-block"
+									ng-messages="form['precio' + $index].$error"
+									ng-if="form['precio' + $index].$touched">
+
+									<div ng-include="'messages.html'"></div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class='col-sm-4'>
+
+							<div ng-class="{'has-error': form.cantidad{{$index}}.$touched && form.cantidad{{$index}}.$invalid}">
+								<h4 class='titulo'>Cantidad</h4>
+								<input
+									type='tel'
+									name="cantidad{{$index}}"
+									class="form-control"
+									value="{{x.cantidad}}"
+									ng-model="x.cantidad"
+									ng-keyup="calcular(x)"
+									ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+									ng-maxlength="6"
+									required>
+
+								<div
+									class="help-block"
+									ng-messages="form['cantidad' + $index].$error"
+									ng-if="form['cantidad' + $index].$touched">
+
+									<div ng-include="'messages.html'"></div>
+								</div>
+							</div>
+
+						</div>
+						<div class='col-sm-4'>
+							<h4 class='precio'>Resultado</h4>
+
+							<div
+								id='divVerde'
+								class='alert alert-success'>
+								<h4 class='precio'>{{x.resultado}}</h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</form>
