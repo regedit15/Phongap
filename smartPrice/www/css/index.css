@@ -1,109 +1,88 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%
-}
-.tablaContenedora {
-    height: 100%;
-    width: 100%;
-}
-.textoCentrado {
-    text-align: center;
-}
-.divContenedor {
-    display: -webkit-inline-box;
-    margin-top: 50px;
+	margin: 0;
+	padding: 0;
+	height: 100%
 }
 
-/**/
-
-@media only screen and (max-width: 768px) {
-    #grilla {
-        max-width: 767px;
-    }
-    .contenedor {
-        max-width: 300px !important;
-    }
-}
-.contenedor {
-    width: 100%;
-    max-width: 686px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .titulo {
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
+
 .input {
-    width: 150px;
+	width: 150px;
 }
+
 .precio {
-    text-align: center;
-    margin-bottom: 0px;
+	text-align: center;
+	margin-bottom: 0px;
 }
+
 input {
-    text-align: center;
+	text-align: center;
 }
+
 .navbar-brand {
-    margin-left: 0px !important;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin: auto;
+	margin-left: 0px !important;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	text-align: center;
+	margin: auto;
 }
+
 #divVerde {
-    max-width: 142px;
-    min-height: 35px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 7px;
-    padding-bottom: 7px;
+	max-width: 142px;
+	min-height: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
+
 #grilla {
-    padding: 0px;
+	padding: 0px;
 }
+
 .acercaDe {
-    display: table-cell;
-    vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
-#papa {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+
+#contenedor {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
+
 .morado {
-    border-radius: 6px;
-    background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
-    width: 245px;
-    height: 105px;
-    margin: auto;
-    margin-top: 54px;
+	border-radius: 6px;
+	background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+	width: 245px;
+	height: 105px;
+	margin: auto;
+	margin-top: 54px;
 }
+
 .powerBy {
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 23px;
-    text-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 0px;
-    text-align: center;
-    padding-top: 20px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 23px;
+	text-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 0px;
+	text-align: center;
+	padding-top: 20px;
 }
+
 .version {
-    box-sizing: border-box;
-    color: rgb(205, 191, 227);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    text-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 0px;
-    text-align: center;
+	box-sizing: border-box;
+	color: rgb(205, 191, 227);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 0px;
+	text-align: center;
 }
+
 .glyphicon {
-    margin-right: 5px;
-}
-.error {
-    color: red;
+	margin-right: 5px;
 }
