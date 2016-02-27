@@ -3,7 +3,6 @@
 	name="form"
 	novalidate>
 
-
 	<table>
 		<tr>
 			<td>
@@ -12,80 +11,256 @@
 					class="btn btn-info"
 					id="btn_agregar"
 					ng-click="agregar()">
-					<span class="glyphicon glyphicon-plus"></span> Agregar
+					<span class="glyphicon glyphicon-plus"></span>
+					Agregar
 				</button>
 			</td>
 		</tr>
 
 		<tr ng-repeat="x in calculos">
+
+
 			<td>
-				<div
-					id="grilla"
-					class="container-fluid">
-					<div class='row'>
-						<div class='col-sm-4'>
 
-							<div ng-class="{'has-error': form.precio{{$index}}.$touched && form.precio{{$index}}.$invalid}">
-								<h4 class='titulo'>Precio</h4>
-								<input
-									type='tel'
-									name="precio{{$index}}"
-									value="{{x.precio}}"
-									class="form-control"
-									ng-model="x.precio"
-									ng-keyup="calcular(x)"
-									ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
-									ng-maxlength="6"
-									required>
+				<div style="margin: auto; display: table;">
 
-								<div
-									class="help-block"
-									ng-messages="form['precio' + $index].$error"
-									ng-if="form['precio' + $index].$touched">
+					<div style="display: -webkit-inline-box; margin-left: 20px;">
 
-									<div ng-include="'messages.html'"></div>
+						<select
+							class="form-control"
+							id="sel1"
+							style="width: 164px;"
+							ng-model="x.tipo"
+							ng-change="limpiar(x)">
+							<option value="cantidad">Por Cantidad</option>
+							<option value="unidad">Por Unidad</option>
+							<option value="descuento1">-X% Descuento 2da Unidad</option>
+						</select>
+
+
+						<button
+							type="button"
+							class="btn btn-warning"
+							id="btn_agregar"
+							ng-click="limpiar(x)"
+							style="margin-left: 20px;">
+							<span class="glyphicon glyphicon-trash"></span>
+							Limpiar
+						</button>
+
+					</div>
+				</div>
+
+				<div ng-if="x.tipo == 'cantidad'">
+					<div
+						id="grilla"
+						class="container-fluid">
+						<div class='row'>
+							<div class='col-sm-4'>
+
+								<div ng-class="{'has-error': form.precio{{$index}}.$touched && form.precio{{$index}}.$invalid}">
+									<h4 class='titulo'>Precio</h4>
+									<input
+										type='tel'
+										name="precio{{$index}}"
+										value="{{x.precio}}"
+										class="form-control"
+										ng-model="x.precio"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="4"
+										required>
+
+									<div
+										class="help-block"
+										ng-messages="form['precio' + $index].$error"
+										ng-if="form['precio' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+
 								</div>
 
 							</div>
+							<div class='col-sm-4'>
 
-						</div>
-						<div class='col-sm-4'>
+								<div ng-class="{'has-error': form.cantidad{{$index}}.$touched && form.cantidad{{$index}}.$invalid}">
+									<h4 class='titulo'>Cantidad</h4>
+									<input
+										type='tel'
+										name="cantidad{{$index}}"
+										class="form-control"
+										value="{{x.cantidad}}"
+										ng-model="x.cantidad"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="6"
+										required>
 
-							<div ng-class="{'has-error': form.cantidad{{$index}}.$touched && form.cantidad{{$index}}.$invalid}">
-								<h4 class='titulo'>Cantidad</h4>
-								<input
-									type='tel'
-									name="cantidad{{$index}}"
-									class="form-control"
-									value="{{x.cantidad}}"
-									ng-model="x.cantidad"
-									ng-keyup="calcular(x)"
-									ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
-									ng-maxlength="6"
-									required>
+									<div
+										class="help-block"
+										ng-messages="form['cantidad' + $index].$error"
+										ng-if="form['cantidad' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+								</div>
+
+							</div>
+							<div class='col-sm-4'>
+								<h4 class='precio'>Resultado</h4>
 
 								<div
-									class="help-block"
-									ng-messages="form['cantidad' + $index].$error"
-									ng-if="form['cantidad' + $index].$touched">
-
-									<div ng-include="'messages.html'"></div>
+									id='divVerde'
+									class='alert alert-success'>
+									<h4 class='precio'>{{x.resultado}}</h4>
 								</div>
+
 							</div>
-
-						</div>
-						<div class='col-sm-4'>
-							<h4 class='precio'>Resultado</h4>
-
-							<div
-								id='divVerde'
-								class='alert alert-success'>
-								<h4 class='precio'>{{x.resultado}}</h4>
-							</div>
-
 						</div>
 					</div>
 				</div>
+
+				<div ng-if="x.tipo == 'unidad'">
+					<div
+						id="grilla"
+						class="container-fluid">
+						<div class='row'>
+							<div class='col-sm-4'>
+
+								<div ng-class="{'has-error': form.precio{{$index}}.$touched && form.precio{{$index}}.$invalid}">
+									<h4 class='titulo'>Precio</h4>
+									<input
+										type='tel'
+										name="precio{{$index}}"
+										value="{{x.precio}}"
+										class="form-control"
+										ng-model="x.precio"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="6"
+										required>
+
+									<div
+										class="help-block"
+										ng-messages="form['precio' + $index].$error"
+										ng-if="form['precio' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class='col-sm-4'>
+
+								<div ng-class="{'has-error': form.cantidad{{$index}}.$touched && form.cantidad{{$index}}.$invalid}">
+									<h4 class='titulo'>Unidades</h4>
+									<input
+										type='tel'
+										name="cantidad{{$index}}"
+										class="form-control"
+										value="{{x.cantidad}}"
+										ng-model="x.cantidad"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="6"
+										required>
+
+									<div
+										class="help-block"
+										ng-messages="form['cantidad' + $index].$error"
+										ng-if="form['cantidad' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+								</div>
+
+							</div>
+							<div class='col-sm-4'>
+								<h4 class='precio'>Precio Por Unidad</h4>
+
+								<div
+									id='divVerde'
+									class='alert alert-success'>
+									<h4 class='precio'>{{x.resultado}}</h4>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div ng-if="x.tipo == 'descuento1'">
+					<div
+						id="grilla"
+						class="container-fluid">
+						<div class='row'>
+							<div class='col-sm-4'>
+
+								<div ng-class="{'has-error': form.precio{{$index}}.$touched && form.precio{{$index}}.$invalid}">
+									<h4 class='titulo'>Precio</h4>
+									<input
+										type='tel'
+										name="precio{{$index}}"
+										value="{{x.precio}}"
+										class="form-control"
+										ng-model="x.precio"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="6"
+										required>
+
+									<div
+										class="help-block"
+										ng-messages="form['precio' + $index].$error"
+										ng-if="form['precio' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class='col-sm-4'>
+
+								<div ng-class="{'has-error': form.cantidad{{$index}}.$touched && form.cantidad{{$index}}.$invalid}">
+									<h4 class='titulo'>Descuento (%)</h4>
+									<input
+										type='tel'
+										name="cantidad{{$index}}"
+										class="form-control"
+										value="{{x.cantidad}}"
+										ng-model="x.cantidad"
+										ng-keyup="calcular(x)"
+										ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+										ng-maxlength="6"
+										required>
+
+									<div
+										class="help-block"
+										ng-messages="form['cantidad' + $index].$error"
+										ng-if="form['cantidad' + $index].$touched">
+
+										<div ng-include="'messages.html'"></div>
+									</div>
+								</div>
+
+							</div>
+							<div class='col-sm-4'>
+								<h4 class='precio'>Precio Por Unidad</h4>
+
+								<div
+									id='divVerde'
+									class='alert alert-success'>
+									<h4 class='precio'>{{x.resultado}}</h4>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</td>
 		</tr>
 	</table>

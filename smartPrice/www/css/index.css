@@ -64,6 +64,10 @@ input {
 	margin-top: 54px;
 }
 
+.has-error .form-control {
+	border-color: red !important;
+}
+
 .powerBy {
 	box-sizing: border-box;
 	color: rgb(255, 255, 255);
@@ -85,4 +89,8 @@ input {
 
 .glyphicon {
 	margin-right: 5px;
+}
+
+.msjError {
+	color: red;
 }
